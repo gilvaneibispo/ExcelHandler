@@ -1,0 +1,23 @@
+{
+    "name": "meuapp/developer",
+    "require": {
+        "php": ">=7.3.5",
+        "phpoffice/phpspreadsheet": "^1.15"
+    },
+    "minimum-stability": "alpha",
+    "authors": [
+        {
+            "name": "gpbispo",
+            "email": "gilvanei.pereira@gmail.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "gpbispo\\": "vendor",
+            "app\\": "app/class"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    }
+}
