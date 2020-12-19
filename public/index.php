@@ -5,7 +5,7 @@ require_once '../vendor/autoload.php';
 use app\ExcelHandler;
 
 $sheet = new ExcelHandler();
-$sheet->loadSheet();
+$sheet->loadSheet("Matricula_UPT");
 
 $cols = 676;
 $lines = 30;
