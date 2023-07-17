@@ -1,8 +1,8 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require_once '../../vendor/autoload.php';
 
-// use the factory to create a Faker\Generator instance
+# use the factory to create a Faker\Generator instance
 $faker = Faker\Factory::create("pt_BR");
 
 $users = array();
@@ -19,35 +19,18 @@ for ($i = 0; $i < 50; $i++) {
     );
 }
 
-/*
-$header = array(
-    "#",
-    "Nome",
-    "cpf",
-    array(
-        "text" => "Telefone",
-        "align" => \App\Handlers\WorksheetConfig::CELL_ALIGN_LEFT,
-        "is_bold" => true,
-        "width" => 150
-    ),
-    "email",
-    "Estado representado",
-);
-*/
-
-$header = array(
+$header = [
     "#",
     "Nome",
     "cpf",
     "telefone",
     "email",
     "Estado representado",
-);
+];
 
 try {
 
-    $config = array("to_style_stripes" => true);
-    (new \App\Spreadsheets())->writeWorksheet($config, $header, $users);
+    (new \App\Spreadsheets())->writeWorksheet(["to_style_stripes" => true], $header, $users);
 
 } catch (\Exception $e) {
     echo $e->getMessage() . "<br/>";

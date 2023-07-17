@@ -1,5 +1,5 @@
 {
-    "name": "meuapp/developer",
+    "name": "gbispo/excel_handlers",
     "require": {
         "php": ">=7.4.0",
         "phpoffice/phpspreadsheet": "^1.15",
